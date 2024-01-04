@@ -85,7 +85,7 @@ def set_email(name, email):
             student['email']=email
     pass
 
-set_email('Bob', 'bob.new@example.com')  
+#set_email('Bob', 'bob.new@example.com')  
 #print(set_email('Alice','udt@example.com'))
 
 def add_grade(name, profession, grade):
@@ -116,8 +116,10 @@ def avg_grade(name, profession):
         if grade[0]==profession:
             total_grades+= grade[1]
             count+=1
-        average_grade = total_grades / count
-    return average_grade
+        if(count>0):  
+            average_grade = total_grades / count
+            return average_grade
+        return None
 
 # def calculate_average_grade(classroom, student_name, profession):
 #     total_grades = 0
@@ -137,7 +139,7 @@ def avg_grade(name, profession):
 #     return average_grade
 
 
-#print(avg_grade('Charlie','physics'))
+print(avg_grade('Charlie','english'))
 
 
 def get_professions(name):
