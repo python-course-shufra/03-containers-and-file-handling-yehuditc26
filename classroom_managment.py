@@ -83,9 +83,9 @@ def set_email(name, email):
     for student in classroom:
         if student['name']==name:
             student['email']=email
-            return True
-        return False
-    
+    pass
+
+set_email('Bob', 'bob.new@example.com')  
 #print(set_email('Alice','udt@example.com'))
 
 def add_grade(name, profession, grade):
